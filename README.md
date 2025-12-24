@@ -2,7 +2,7 @@
 
 Academic CV and professional homepage.
 
-🌐 **Live site:** https://Muna_YB.github.io
+🌐 **Live site:** https://Yirga-16.github.io
 
 ---
 
