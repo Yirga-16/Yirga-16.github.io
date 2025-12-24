@@ -150,6 +150,65 @@
     section h3 {
       margin-top: 22px;
     }
+
+
+    .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.skill-circle {
+  text-decoration: none;
+  color: #333;
+}
+
+.skill-circle i {
+  font-size: 1.6em;
+  margin-top: 6px;
+  color: #555;
+}
+
+.skill-circle p {
+  margin: 6px 0 0;
+  font-weight: 600;
+}
+
+/* Circular chart */
+.circle {
+  --size: 90px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #ff9800 calc(var(--p) * 1%),
+      #e6e6e6 0
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.circle::before {
+  content: "";
+  width: 70%;
+  height: 70%;
+  background: #fafafa;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle span {
+  position: relative;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
   </style>
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -338,142 +397,59 @@
 <section>
   <h2>Skills</h2>
 
-<div class="skill">
-  <span>
-    <a href="https://www.python.org" target="_blank" rel="noopener">
-      <i class="fa-brands fa-python"></i> Python
-    </a>
-  </span>
-  <div class="bar"><div class="level l90"></div></div>
-</div>
+  <div class="skills-grid">
 
-<div class="skill">
-  <span>
-    <a href="https://www.r-project.org" target="_blank" rel="noopener">
-      <i class="fa-brands fa-r-project"></i> R
+    <a href="https://www.python.org" target="_blank" class="skill-circle">
+      <div class="circle" style="--p:90;">
+        <span>90%</span>
+      </div>
+      <i class="fa-brands fa-python"></i>
+      <p>Python</p>
     </a>
-  </span>
-  <div class="bar"><div class="level l75"></div></div>
-</div>
 
-<div class="skill">
-  <span>
-    <a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">
-      <i class="fa-solid fa-code"></i> MATLAB
+    <a href="https://www.r-project.org" target="_blank" class="skill-circle">
+      <div class="circle" style="--p:75;">
+        <span>75%</span>
+      </div>
+      <i class="fa-brands fa-r-project"></i>
+      <p>R</p>
     </a>
-  </span>
-  <div class="bar"><div class="level l85"></div></div>
-</div>
 
-<div class="skill">
-  <span>
-    <a href="https://www.mysql.com" target="_blank" rel="noopener">
-      <i class="fa-solid fa-database"></i> SQL
+    <a href="https://www.mathworks.com/products/matlab.html" target="_blank" class="skill-circle">
+      <div class="circle" style="--p:85;">
+        <span>85%</span>
+      </div>
+      <i class="fa-solid fa-code"></i>
+      <p>MATLAB</p>
     </a>
-  </span>
-  <div class="bar"><div class="level l50"></div></div>
-</div>
 
-<div class="skill">
-  <span>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">
-      <i class="fa-brands fa-html5"></i> HTML
+    <a href="https://www.ansys.com" target="_blank" class="skill-circle">
+      <div class="circle" style="--p:80;">
+        <span>80%</span>
+      </div>
+      <i class="fa-solid fa-gears"></i>
+      <p>ANSYS</p>
     </a>
-  </span>
-  <div class="bar"><div class="level l00"></div></div>
-</div>
 
-<div class="skill">
-  <span>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">
-      <i class="fa-brands fa-css3-alt"></i> CSS
+    <a href="https://www.homerenergy.com" target="_blank" class="skill-circle">
+      <div class="circle" style="--p:90;">
+        <span>90%</span>
+      </div>
+      <i class="fa-solid fa-microchip"></i>
+      <p>HOMER</p>
     </a>
-  </span>
-  <div class="bar"><div class="level l00"></div></div>
-</div>
 
-<div class="skill">
-  <span>
-    <a href="https://www.oracle.com/java/" target="_blank" rel="noopener">
-      <i class="fa-brands fa-java"></i> Java
+    <a href="https://www.latex-project.org" target="_blank" class="skill-circle">
+      <div class="circle" style="--p:85;">
+        <span>85%</span>
+      </div>
+      <i class="fa-solid fa-file-lines"></i>
+      <p>LaTeX</p>
     </a>
-  </span>
-  <div class="bar"><div class="level l00"></div></div>
-</div>
 
-<div class="skill">
-  <span>
-    <a href="https://www.ansys.com" target="_blank" rel="noopener">
-      <i class="fa-solid fa-gears"></i> ANSYS
-    </a>
-  </span>
-  <div class="bar"><div class="level l80"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.comsol.com" target="_blank" rel="noopener">
-      <i class="fa-solid fa-gears"></i> COMSOL
-    </a>
-  </span>
-  <div class="bar"><div class="level l50"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.pscad.com" target="_blank" rel="noopener">
-      <i class="fa-solid fa-microchip"></i> PSCAD
-    </a>
-  </span>
-  <div class="bar"><div class="level l50"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html" target="_blank" rel="noopener">
-      <i class="fa-solid fa-microchip"></i> SPICE
-    </a>
-  </span>
-  <div class="bar"><div class="level l75"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.homerenergy.com" target="_blank" rel="noopener">
-      <i class="fa-solid fa-microchip"></i> HOMER
-    </a>
-  </span>
-  <div class="bar"><div class="level l90"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.esri.com/en-us/arcgis/products/index" target="_blank" rel="noopener">
-      <i class="fa-solid fa-map-location-dot"></i> ArcGIS
-    </a>
-  </span>
-  <div class="bar"><div class="level l60"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.latex-project.org" target="_blank" rel="noopener">
-      <i class="fa-solid fa-file-lines"></i> LaTeX
-    </a>
-  </span>
-  <div class="bar"><div class="level l85"></div></div>
-</div>
-
-<div class="skill">
-  <span>
-    <a href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noopener">
-      <i class="fa-solid fa-file-lines"></i> Microsoft Office
-    </a>
-  </span>
-  <div class="bar"><div class="level l85"></div></div>
-</div>
-
+  </div>
 </section>
+
 
 
 
