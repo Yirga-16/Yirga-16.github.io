@@ -1,4 +1,3 @@
-# Muna_YB.github.io
 # Yirga Belay, PhD
 
 Academic CV and professional homepage.
