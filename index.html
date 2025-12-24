@@ -208,6 +208,68 @@
   font-weight: bold;
   font-size: 0.9em;
 }
+.skills-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* PIE CHART */
+.pie-chart {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #2e7d32 0% 35%,      /* Expert */
+    #ff9800 35% 65%,    /* Advanced */
+    #ffc107 65% 85%,    /* Intermediate */
+    #e0e0e0 85% 100%    /* Basic */
+  );
+  position: relative;
+}
+
+.pie-chart::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  background: #fafafa;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* LEGEND */
+.skills-legend {
+  max-width: 500px;
+}
+
+.skills-legend h4 {
+  margin: 10px 0 4px;
+  font-size: 1em;
+}
+
+.skills-legend p {
+  margin: 0 0 10px;
+  font-size: 0.95em;
+}
+
+.skills-legend a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.skills-legend a:hover {
+  text-decoration: underline;
+}
+
+/* COLORS */
+.expert h4 { color: #2e7d32; }
+.advanced h4 { color: #ff9800; }
+.intermediate h4 { color: #ffc107; }
+.basic h4 { color: #9e9e9e; }
 
   </style>
   <link rel="stylesheet"
@@ -397,58 +459,57 @@
 <section>
   <h2>Skills</h2>
 
-  <div class="skills-grid">
+  <div class="skills-wrapper">
 
-    <a href="https://www.python.org" target="_blank" class="skill-circle">
-      <div class="circle" style="--p:90;">
-        <span>90%</span>
+    <!-- PIE CHART -->
+    <div class="pie-chart"></div>
+
+    <!-- LEGEND + SKILLS -->
+    <div class="skills-legend">
+
+      <div class="group expert">
+        <h4>Expert (≥ 85%)</h4>
+        <p>
+          <a href="https://www.python.org" target="_blank">Python</a>,
+          <a href="https://www.mathworks.com/products/matlab.html" target="_blank">MATLAB</a>,
+          <a href="https://www.homerenergy.com" target="_blank">HOMER</a>,
+          <a href="https://www.latex-project.org" target="_blank">LaTeX</a>,
+          <a href="https://www.microsoft.com/microsoft-365" target="_blank">MS Office</a>
+        </p>
       </div>
-      <i class="fa-brands fa-python"></i>
-      <p>Python</p>
-    </a>
 
-    <a href="https://www.r-project.org" target="_blank" class="skill-circle">
-      <div class="circle" style="--p:75;">
-        <span>75%</span>
+      <div class="group advanced">
+        <h4>Advanced (70–84%)</h4>
+        <p>
+          <a href="https://www.r-project.org" target="_blank">R</a>,
+          <a href="https://www.ansys.com" target="_blank">ANSYS</a>,
+          <a href="https://www.analog.com/ltspice" target="_blank">SPICE</a>,
+          <a href="https://www.esri.com/arcgis" target="_blank">ArcGIS</a>
+        </p>
       </div>
-      <i class="fa-brands fa-r-project"></i>
-      <p>R</p>
-    </a>
 
-    <a href="https://www.mathworks.com/products/matlab.html" target="_blank" class="skill-circle">
-      <div class="circle" style="--p:85;">
-        <span>85%</span>
+      <div class="group intermediate">
+        <h4>Intermediate (50–69%)</h4>
+        <p>
+          <a href="https://www.mysql.com" target="_blank">SQL</a>,
+          <a href="https://www.comsol.com" target="_blank">COMSOL</a>,
+          <a href="https://www.pscad.com" target="_blank">PSCAD</a>
+        </p>
       </div>
-      <i class="fa-solid fa-code"></i>
-      <p>MATLAB</p>
-    </a>
 
-    <a href="https://www.ansys.com" target="_blank" class="skill-circle">
-      <div class="circle" style="--p:80;">
-        <span>80%</span>
+      <div class="group basic">
+        <h4>Basic (25–49%)</h4>
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>,
+          <a href="https://www.oracle.com/java/" target="_blank">Java</a>
+        </p>
       </div>
-      <i class="fa-solid fa-gears"></i>
-      <p>ANSYS</p>
-    </a>
 
-    <a href="https://www.homerenergy.com" target="_blank" class="skill-circle">
-      <div class="circle" style="--p:90;">
-        <span>90%</span>
-      </div>
-      <i class="fa-solid fa-microchip"></i>
-      <p>HOMER</p>
-    </a>
-
-    <a href="https://www.latex-project.org" target="_blank" class="skill-circle">
-      <div class="circle" style="--p:85;">
-        <span>85%</span>
-      </div>
-      <i class="fa-solid fa-file-lines"></i>
-      <p>LaTeX</p>
-    </a>
-
+    </div>
   </div>
 </section>
+
 
 
 
