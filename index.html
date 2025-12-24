@@ -271,6 +271,19 @@
 .intermediate h4 { color: #ffc107; }
 .basic h4 { color: #9e9e9e; }
 
+    /* LANGUAGE PIE CHART */
+.language-chart {
+  background: conic-gradient(
+    #2e7d32 0% 35%,      /* Native */
+    #ff9800 35% 65%,    /* Proficient */
+    #ffc107 65% 85%,    /* Intermediate */
+    #e0e0e0 85% 100%    /* Beginner */
+  );
+}
+
+
+
+    
   </style>
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -511,6 +524,44 @@
   <p style="font-size:0.85em;color:#666;margin-top:10px;">
 Skill proficiency grouped by experience level (self-assessed)
 </p>
+<section>
+  <h2>Languages</h2>
+
+  <div class="skills-wrapper">
+
+    <!-- PIE CHART -->
+    <div class="pie-chart language-chart"></div>
+
+    <!-- LEGEND -->
+    <div class="skills-legend">
+
+      <div class="group expert">
+        <h4>Native</h4>
+        <p>Amharic</p>
+      </div>
+
+      <div class="group advanced">
+        <h4>Proficient</h4>
+        <p>English</p>
+      </div>
+
+      <div class="group intermediate">
+        <h4>Intermediate</h4>
+        <p>Tigrigna</p>
+      </div>
+
+      <div class="group basic">
+        <h4>Beginner</h4>
+        <p>Chinese</p>
+      </div>
+
+    </div>
+  </div>
+
+  <p style="font-size:0.85em;color:#666;margin-top:10px;">
+    Language proficiency levels based on professional and academic usage
+  </p>
+</section>
 
 </section>
 
