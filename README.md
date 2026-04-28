@@ -4,7 +4,7 @@ Hi you👋 I'm [Yirga Belay, PhD]([https://github.com/Yirga-16](https://Yirga-16
 
 Academic CV and professional homepage.
 
-🌐 **Live site:** 
+🌐 **Live site:** [https://www.linkedin.com/in/yirgabelay/]
 
 ---
 
